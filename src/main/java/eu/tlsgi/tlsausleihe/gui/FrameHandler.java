@@ -10,8 +10,16 @@ import java.util.Objects;
 
 public class FrameHandler {
 
-    public void openFrame(String frameName) throws IOException {
-        TLSAusleihe.instance.getStage().setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/" + frameName + ".fxml")))));
+    public void openFrame(String frameName) {
+        try {
+            Scene scene = new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/" + frameName + ".fxml"))));
+
+            scene.getStylesheets().add("/css/style.css");
+
+            TLSAusleihe.instance.getStage().setScene(scene);
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+        }
     }
 
 }
