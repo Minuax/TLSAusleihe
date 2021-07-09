@@ -2,7 +2,6 @@ package eu.tlsgi.tlsausleihe.gui;
 
 import eu.tlsgi.tlsausleihe.TLSAusleihe;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 import java.io.IOException;

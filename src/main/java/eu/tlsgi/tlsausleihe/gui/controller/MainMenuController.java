@@ -22,12 +22,7 @@ public class MainMenuController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        studentMenuButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                TLSAusleihe.instance.getFrameHandler().openFrame("StudentMenu");
-            }
-        });
+        studentMenuButton.setOnAction(event -> TLSAusleihe.instance.getFrameHandler().openFrame("StudentMenu"));
 
         bookMenuButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
