@@ -30,7 +30,7 @@
 
 .text-area {
     -fx-focus-color: transparent;
-    -fx-faint-focus-color: transparent;
+    -fx-faint-focus-color: grey;
 }
 
 /* Fix derived prompt color for text fields */
@@ -40,7 +40,7 @@
 
 /* Keep prompt invisible when focused (above color fix overrides it) */
 .text-input:focused {
-    -fx-prompt-text-fill: transparent;
+    -fx-prompt-text-fill: grey;
 }
 
 /* Fix scroll bar buttons arrows colors */

@@ -13,28 +13,25 @@ import java.util.ResourceBundle;
 
 public class MainMenuController implements Initializable {
 
-    public Button studentMenuButton;
+    public Button lendMenuButton;
     public Button bookMenuButton;
-    public Button teacherMenuButton;
     public Button adminMenuButton;
     public Button logoutButton;
     public Button closeButton;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        studentMenuButton.setOnAction(event -> TLSAusleihe.instance.getFrameHandler().openFrame("StudentMenu"));
+        lendMenuButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                TLSAusleihe.instance.getFrameHandler().openFrame("LendMenu");
+            }
+        });
 
         bookMenuButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 TLSAusleihe.instance.getFrameHandler().openFrame("BookMenu");
-            }
-        });
-
-        teacherMenuButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                TLSAusleihe.instance.getFrameHandler().openFrame("TeacherMenu");
             }
         });
 

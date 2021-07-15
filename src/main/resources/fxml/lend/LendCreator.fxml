@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="315.0"
+      prefWidth="260.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="eu.tlsgi.tlsausleihe.gui.controller.lend.LendCreatorController">
+    <Label layoutX="6.0" layoutY="5.0" text="Buch verleihen">
+        <font>
+            <Font size="16.0"/>
+        </font>
+    </Label>
+
+    <Label layoutX="11.0" layoutY="30.0" text="Schüler:"/>
+    <Label layoutX="10.0" layoutY="75.0" text="ISBN:"/>
+    <TextField fx:id="isbnField" layoutX="10.0" layoutY="92.0" prefHeight="25.0" prefWidth="240.0"/>
+    <Label layoutX="10.0" layoutY="170.0" text="Verleihdatum"/>
+
+    <Button fx:id="selectStudentButton" layoutX="12.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="240.0" text="Schüler wählen"/>
+    <Button fx:id="saveChangesButton" layoutX="149.0" layoutY="224.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" text="Verleihen"/>
+    <Button fx:id="backButton" layoutX="12.0" layoutY="279.0" mnemonicParsing="false" text="Zurück"/>
+
+    <Label layoutX="10.0" layoutY="121.0" text="Signatur:"/>
+
+    <TextField fx:id="signatureField" layoutX="10.0" layoutY="138.0" prefHeight="25.0" prefWidth="240.0"/>
+    <DatePicker fx:id="datePicker" layoutX="10.0" layoutY="187.0" prefHeight="25.0" prefWidth="240.0"/>
+</Pane>
